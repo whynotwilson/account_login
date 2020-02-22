@@ -23,6 +23,16 @@ express-handlebars v6.4.1<br>
 express-session v1.17.0<br><br>
 
 
+使用帳密
+--
+|信箱                |密碼             |
+|:------             |:------         |
+|tony@stark.com      |iamironman      |
+|captain@hotmail.com |icandothisallday|
+|peter@parker.com    |enajyram        |
+|natasha@gamil.com   |parol           |
+|nick@shield.com     |password        |
+
 
 安裝流程
 --
