@@ -5,18 +5,22 @@ AC week 2 實作 登入功能
 功能
 ---
 簡易登入實作<br><br>
+使用 session cookie 紀錄使用者狀態
+
 
 使用說明
 ---
 1.填入信箱及密碼<br>
-2.點選登入<br><br>
+2.點選登入<br>
+3.成功登入後20秒內重新進入此網站不用重新登入<br><br>
 
 
 建置環境
 --
 node.js v10.15.0<br>
 express v6.4.1<br>
-express-handlebars v6.4.1<br><br>
+express-handlebars v6.4.1<br>
+express-session v1.17.0<br><br>
 
 
 

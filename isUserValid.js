@@ -1,6 +1,7 @@
 function isUserValid(email, pwd){
 
     const users = [
+        // {firstName:'test', email:'1@1', password: '1'},
         {
           firstName: 'Tony',
           email: 'tony@stark.com',
