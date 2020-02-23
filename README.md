@@ -4,7 +4,7 @@ AC week 2 實作 登入功能
 
 功能
 ---
-簡易登入實作<br><br>
+簡易登入實作<br>
 使用 session cookie 紀錄使用者狀態
 
 
