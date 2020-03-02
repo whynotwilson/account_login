@@ -1,12 +1,18 @@
 <div class="d-flex align-items-center justify-content-center">
-    <form method="post">
-        <h1 class="mb-3">Account Login</h1>
-        <div class="form-group mb-3">
-            <input type="email" class="form-control" id="InputEmail1" name="email" aria-describedby="emailHelp" placeholder="Email">
-        </div>
-        <div class="form-group mb-3">
-            <input type="password" class="form-control" id="InputPassword1" name="password" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary">登入</button>
-    </form>
+  <form method="post">
+    <h1 class="mb-3">Account Login</h1>
+    <div class="form-group mb-3">
+      <input type="email" class="form-control" id="InputEmail1" name="email" aria-describedby="emailHelp"
+        placeholder="Email">
+    </div>
+    <div class="form-group mb-3">
+      <input type="password" class="form-control" id="InputPassword1" name="password" placeholder="Password">
+    </div>
+    {{#if warning}}
+    <div class="alert alert-danger" role="alert">
+      信箱或密碼錯誤!
+    </div>
+    {{/if}}
+    <button type="submit" class="btn btn-primary">登入</button>
+  </form>
 </div>

@@ -1,10 +1,10 @@
 const express = require('express')
-const port = 3000
 const bodyParser = require('body-parser')
 const exphbs = require('express-handlebars')
-const app = express()
 const isUserValid = require('./isUserValid')
 const session = require('express-session')
+const app = express()
+const port = 3000
 
 app.use(session({
   secret: 'Alpha camp Account_Login',
@@ -26,7 +26,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // setting router
 app.get('/', (req, res) => {
   const sess = req.session
-  // console.log('session', sess)
   if (sess.userName) {
     res.render('welcome', { userName: sess.userName })
   } else res.render('login')
@@ -38,10 +37,10 @@ app.post('/', (req, res) => {
     req.session.regenerate(function () {
       req.session.userName = isUserValid(user.email, user.password)
     })
+    res.render('welcome', { userName: isUserValid(user.email, user.password) })
+  } else {
+    res.render('login', { warning: true })
   }
-  // console.log('Post reStore session:', req.session)
-  res.render('welcome', { userName: isUserValid(user.email, user.password) })
-  console.log('post')
 })
 
 app.listen(port, () => {
